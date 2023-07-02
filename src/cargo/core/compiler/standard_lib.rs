@@ -87,8 +87,8 @@ pub fn resolve_std<'cfg>(
         })
         .collect::<CargoResult<Vec<_>>>()?;
     let source_path = SourceId::for_git(
-        &url::Url::parse("https://github.com/mrk-its/compiler-builtins").unwrap(),
-        GitReference::Tag("0.1.85-mos".to_string()),
+        &url::Url::parse("https://github.com/mlund/compiler-builtins").unwrap(),
+        GitReference::Tag("master".to_string()),
     )?;
     let dep = Dependency::parse("compiler_builtins", None, source_path)?;
     patches.push(dep);
